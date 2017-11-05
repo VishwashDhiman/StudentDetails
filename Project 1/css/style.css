@@ -1,0 +1,16 @@
+.glyphicon {
+    float: left;
+}
+.edit{
+    float:left;
+    padding-left:15px;
+    padding-right:15px;
+}
+.display{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+thead{
+    background-color: black;
+    color: rgba(255, 0, 0, 0.94);
+}
