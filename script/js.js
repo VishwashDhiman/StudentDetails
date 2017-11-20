@@ -51,14 +51,18 @@ function add()
 
     //Validates the enrties
 
-    if(ename=='' || ename==' ' || !(/^[a-zA-Z]*$/g).test(ename))
-    alert('Enter correct name ');
+    if(ename=='' || ename==' ' || !(/^[a-zA-Z ]*$/g).test(ename))
+    alert(`${ename} is not valid name
+    please enter valid name`);
     else if(isNaN(eroll) || eroll=='' || eroll==' ')
-    alert('Enter valid roll number');
+    alert(`${eroll} is invalid roll number
+    please enter roll number in numerics`);
     else if(isNaN(eyear) || eyear=='' || eyear==' ')
-    alert('Enter valid year');
-    else if(ebranch=='' || ebranch==' ' || !(/^[a-zA-Z]*$/g).test(ename))
-    alert('Enter valid branch');
+    alert(`${eyear} is not valid year
+    please enter year in numerics`);
+    else if(ebranch=='' || ebranch==' ' || !(/^[a-zA-Z ]*$/g).test(ename))
+    alert(`${ebranch} is not valid branch
+    plaese enter valid branch`);
     else{
     let tname=document.createTextNode(ename);
     let troll=document.createTextNode(eroll);
@@ -123,14 +127,18 @@ function fun(k)
 
     //Validates the enrties
 
-    if(ename=='' || ename==' ' || !(/^[a-zA-Z]*$/g).test(ename))
-    alert('Enter correct name ');
+    if(ename=='' || ename==' ' || !(/^[a-zA-Z ]*$/g).test(ename))
+    alert(`${ename} is not valid name
+    please enter valid name`);
     else if(isNaN(eroll) || eroll=='' || eroll==' ')
-    alert('Enter valid roll number');
+    alert(`${eroll} is invalid roll number
+    please enter roll number in numerics`);
     else if(isNaN(eyear) || eyear=='' || eyear==' ')
-    alert('Enter valid year');
-    else if(ebranch=='' || ebranch==' ' || !(/^[a-zA-Z]*$/g).test(ename))
-    alert('Enter valid branch');
+    alert(`${eyear} is not valid year
+    please enter year in numerics`);
+    else if(ebranch=='' || ebranch==' ' || !(/^[a-zA-Z ]*$/g).test(ename))
+    alert(`${ebranch} is not valid branch
+    plaese enter valid branch`);
     else{
 
     k.parentNode.parentNode.childNodes[0].firstChild.nodeValue=ename;
