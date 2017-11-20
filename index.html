@@ -8,13 +8,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="script/js.js"></script>
         </head>
-        <body>
-         <div class="container-fluid display">
-            <h1><u>Welcome In Student Detail Management System</u></h1>
-            <br>
-         </div>
-         <div class="container-fluid">
-         <div class="row  justify-content-md-center">
+  <body>
+    <div class="container-fluid display">
+        <h1><u>Student Detail Management System</u></h1>
+        <br>
+    </div>
+    <div class="container-fluid">
+      <div class="row  justify-content-md-center">
          <br>
          <div class="col-sm-4">   
          <button type="button" class="btn btn-success btn-lg" onclick=insert1() data-target="#demo"> 
@@ -25,15 +25,15 @@
               Edit Details</button>           
             </div>
           <div class="col-sm-4"> 
-        <button type="button" class="btn btn-danger btn-lg" id="dd" style="display:none" onclick=Delete()>Delete</button></div>
-   </div><br>
-  </div>
+        <button type="button" class="btn btn-danger btn-lg" id="dd" style="display:none" onclick=Delete()>Delete</button>
+          </div>
+      </div><br>
+    </div>
    <div id="demo" style="display: none">
-        <form class="form-inline">
-            <div class="row">
+      <form class="form-inline">
+        <div class="row">
               <div class="col-sm-2">
                 <div class="input-group">
-                  
                   <input type="text" class="form-control" placeholder="Name" id="name" value="">
                 </div>
               </div>
@@ -41,7 +41,7 @@
                 <div class="input-group">
                   <input type="text" class="form-control" id="roll" placeholder="Roll Number">
                 </div>
-                </div>
+              </div>
                 <div class="col-sm-2">
                 <div class="input-group">
                   <input type="text" class="form-control" id="year" placeholder="Year">
@@ -58,15 +58,14 @@
                 <input type="button" class="btn btn-info" id="insert" value="Insert" onclick=add()>
                 </div>
                 </div>
-              </div>
-        </form>
-      </div>
-      <div id="demo1" class="collapse collapseCheck" style="display:none">
-        <form class="form-inline">
+        </div>
+      </form>
+    </div>
+    <div id="demo1" class="collapse collapseCheck" style="display:none">
+      <form class="form-inline">
           <div class="row">
             <div class="col-sm-3">
           <div class="input-group">
-            
             <input type="text" class="form-control" placeholder="Name" id="name1" value="">
           </div>
           </div>
@@ -86,10 +85,10 @@
           </div>
           </div>
         </div>
-        </form>
-      </div>
+      </form>
     </div>
-    <div class="table-responsive">          
+
+    <div class="table-responsive" style="overflow:scroll;height:400px;width:100%;overflow:auto">          
       <table class="table table-hover table-bordered">
         <thead >
           <tr>
@@ -101,12 +100,8 @@
           </tr>
         </thead>
         <tbody id="body">
-         
         </tbody>
       </table>
-      </div>
-    
-           
-        
-        </body>
-    </html>
+    </div>
+  </body>
+</html>
