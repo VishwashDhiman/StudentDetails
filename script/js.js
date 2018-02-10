@@ -12,7 +12,6 @@ function add()
     let year=document.createElement("td");
     let branch=document.createElement("td");
     let check=document.createElement("td");
-    check.className="kite";
     let check1 = document.createElement("input");
     check1.type = "checkbox";
     check1.className="checkbox";
@@ -21,7 +20,7 @@ function add()
 
     check1.onclick=function()
     {
-        qq();
+        showDelete();
     }
     let icon=document.createElement("a");
     icon.className="glyphicon glyphicon-trash";
@@ -41,7 +40,7 @@ function add()
     //Performs Edit operation
 
     edit.onclick=function(){
-        fun(this);
+        Edit(this);
     }
       
     let ename=document.getElementById("name").value;
@@ -98,26 +97,26 @@ function add()
 
 function insert1()
 {
-    if(document.getElementById("demo1").style.display=="none")
+    if(document.getElementById("editdetails").style.display=="none")
     {
-    let a1=document.getElementById('demo');
+    let a1=document.getElementById('insert');
     a1.style.display=a1.style.display=="none"?"block":"none";
     }
     else
     {
-        let a1=document.getElementById('demo');
+        let a1=document.getElementById('insert');
          a1.style.display=a1.style.display=="none"?"block":"none";
-         let a2=document.getElementById("demo1").style.display="none";
+         let a2=document.getElementById("editdetails").style.display="none";
     }
 }
 
 //Performs Edit operations
 
-function fun(k)
+function Edit(present)
 {
-    const a=document.getElementById('demo');
+    const a=document.getElementById('insert');
     a.style.display = a.style.display=="none"?"none":"none";
-    const b=document.getElementById("demo1");
+    const b=document.getElementById("editdetails");
     b.style.display = a.style.display=="none"?"block":"none";
 
     let ename=document.getElementById("name1").value;
@@ -141,10 +140,10 @@ function fun(k)
     plaese enter valid branch`);
     else{
 
-    k.parentNode.parentNode.childNodes[0].firstChild.nodeValue=ename;
-    k.parentNode.parentNode.childNodes[1].firstChild.nodeValue=eroll;
-    k.parentNode.parentNode.childNodes[2].firstChild.nodeValue=eyear;
-    k.parentNode.parentNode.childNodes[3].firstChild.nodeValue=ebranch;
+    present.parentNode.parentNode.childNodes[0].firstChild.nodeValue=ename;
+    present.parentNode.parentNode.childNodes[1].firstChild.nodeValue=eroll;
+    present.parentNode.parentNode.childNodes[2].firstChild.nodeValue=eyear;
+    present.parentNode.parentNode.childNodes[3].firstChild.nodeValue=ebranch;
 
     document.getElementById("name1").value="";
     document.getElementById("roll1").value="";
@@ -158,22 +157,22 @@ function fun(k)
 
 function EDIT()
 {
-    if(document.getElementById("demo").style.display=="none")
+    if(document.getElementById("insert").style.display=="none")
     {
-    const a1=document.getElementById('demo1');
+    const a1=document.getElementById('editdetails');
     a1.style.display=a1.style.display=="none"?"block":"none";
     }
     else
     {
-        const a1=document.getElementById('demo1');
+        const a1=document.getElementById('editdetails');
          a1.style.display=a1.style.display=="none"?"block":"none";
-         const a2=document.getElementById("demo").style.display="none";
+         const a2=document.getElementById("insert").style.display="none";
     }
 }
 
-//Checks if any check box is checked or not
+//Checks if any check box is checked or not to show delete button
 
-function qq()
+function showDelete()
 {
     const a=document.getElementsByClassName("checkbox");
     let c=-1;
@@ -181,7 +180,7 @@ function qq()
        if(x.checked)
        c=1;
     }
-    let a1=document.getElementById('dd');
+    let a1=document.getElementById('delete');
     if(c!=-1)
     a1.style.display="block";  
     else
@@ -200,7 +199,7 @@ function Delete()
              document.getElementById("body").deleteRow(i);
             i=0;
             Delete();
-            document.getElementById('dd').style.display="none";    
+            document.getElementById('delete').style.display="none";    
         }
     }
 }
